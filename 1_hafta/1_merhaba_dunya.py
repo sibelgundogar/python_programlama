@@ -317,3 +317,4 @@ print(sozluk.values())
 for i in sozluk.keys():
     print(i, ":", sozluk[i])
 print("----------------------------------------")
+print("ok")
