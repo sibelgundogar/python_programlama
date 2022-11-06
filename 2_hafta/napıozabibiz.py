@@ -1,3 +1,4 @@
+""""
 a=5
 while a<15:
     print(a)
@@ -103,4 +104,95 @@ print(katini_al(5))
 
 
 
+
+
+#kendisine gönderilen sayılardan sadece palindrom olan sayıları toplayan diğerlerini de bu toplamdan çıkaran ve geri döndüren ohtyon fonlsiyonunu yazınız.
+
+def palinDRAAM(*dram):
+    toplam =fark =0
+    for sayı in dram:
+        if str(sayı)==str(sayı)[::-1]:
+            toplam +=sayı
+        else:
+            fark += sayı
+    return toplam - fark
+
+
+print (palinDRAAM(10,101,55,48,9009))
+
+
+
+#sınıf tanımlama
+
+
+
+
+
+
+
+
+q = 5
+w= "assd"
+e = [1,3,5]
+
+#import phtyon kütüphaneleri projemize dahil etmeye yarar
+
+
+
+
+from termcolor2 import c
+print(c("hello").red.on_white.blink.underline.dark)
+
+
+
+
+
+
+"""
+
+#CSV DOSYALARIYLA ÇALIŞMA OKUMA VE YAZMA
+import csv
+with open ('iris.data' , newline='') as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+        print (row)
+
+
+#yeni bir csv dosyası oluşturu ve verileri içine yazar
+baslik = ["sicaklik", "nem", "basinc"]
+veri = [[30,75.5,10], [32.3,5,50,3], [10.7,7,50,89]]
+with open('sensor_veri.csv',
+          'w', encoding='UTF8', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(baslik)
+    writer.writerows(veri)
+
+ #pandas indirdik
+import pandas as pd
+veri = pd.read_csv("iris.data")
+
+print(veri.head())
+print (veri.columns)
+"""  print (veri[3:5])
+3 den 5 e kadar olanları getirir """
+veri = veri.sort_values(by='sepal_length')
+print(veri.head())
+
+toplam_veri = veri["sepal_length"].sum()
+ortalama_veri = veri["sepal_length"].mean()
+ortanca_veri = veri["sepal_length"].median()
+print("Sum: ", toplam_veri, "\nMean: ", ortalama_veri , "\nMedian: ", ortanca_veri)
+
+
+#SQLITE İLE ÇALIŞMA
+import sqlite3
+con = sqlite3.connect("a.vt")
+cursor=con.cursor()
+
+cursor.execute("CREATE TABLE IF NOT EXISTS kitap"
+               "id INTEGER NOT NULL PRIMARY KEY,"
+               "isim TEXT, yazar TEXT,"
+               "sayfa_sayisi INT")
+con.commit()
+con.close
 
