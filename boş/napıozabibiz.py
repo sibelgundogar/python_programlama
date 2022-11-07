@@ -152,7 +152,7 @@ print(c("hello").red.on_white.blink.underline.dark)
 
 #CSV DOSYALARIYLA ÇALIŞMA OKUMA VE YAZMA
 import csv
-with open ('iris.data' , newline='') as csvfile:
+with open ('../4_hafta/iris.data', newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         print (row)
@@ -161,7 +161,7 @@ with open ('iris.data' , newline='') as csvfile:
 #yeni bir csv dosyası oluşturu ve verileri içine yazar
 baslik = ["sicaklik", "nem", "basinc"]
 veri = [[30,75.5,10], [32.3,5,50,3], [10.7,7,50,89]]
-with open('sensor_veri.csv',
+with open('../4_hafta/sensor_veri.csv',
           'w', encoding='UTF8', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(baslik)
@@ -169,7 +169,7 @@ with open('sensor_veri.csv',
 
  #pandas indirdik
 import pandas as pd
-veri = pd.read_csv("iris.data")
+veri = pd.read_csv("../4_hafta/iris.data")
 
 print(veri.head())
 print (veri.columns)
@@ -186,7 +186,7 @@ print("Sum: ", toplam_veri, "\nMean: ", ortalama_veri , "\nMedian: ", ortanca_ve
 
 #SQLITE İLE ÇALIŞMA
 import sqlite3
-con = sqlite3.connect("a.vt")
+con = sqlite3.connect("../4_hafta/a.vt")
 cursor=con.cursor()
 
 cursor.execute("CREATE TABLE IF NOT EXISTS kitap"
