@@ -190,19 +190,4 @@ katini_al = benim_fonksiyonum(5)
 print(katini_al(5))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print("okey")
