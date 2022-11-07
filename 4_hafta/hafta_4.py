@@ -49,3 +49,5 @@ cursor.execute("CREATE TABLE IF NOT EXISTS kitap "
                "sayfa_sayisi INT)")
 con.commit()
 con.close()
+
+print("okey")
